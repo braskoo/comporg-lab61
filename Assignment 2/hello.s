@@ -31,7 +31,7 @@ end:
 #*Subroutine: inout                                         *
 #*Arguments:                                                *
 #*Return value: int                                         *
-#*Description:                                              *
+#*Description: Takes input from user and increments with 1  *
 #************************************************************
 
 inout:
