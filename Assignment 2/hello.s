@@ -5,8 +5,8 @@
 #*****************************************************************************#
 .text
 formatstr: .asciz "%ld"
-mystring: .asciz "Fatih Yakici 2672343\nAnass Benhaddou 2675334\nAssignment 2: inout\n"
-mysentence: .asciz "Please enter a number\n"
+mystring: .asciz "Fatih Yakici: 2672343\nAnass Benhaddou: 2675334\nAssignment 2: inout\n"
+mysentence: .asciz "Please enter a number:\n"
 space: .asciz "\n"
 
 .global main
