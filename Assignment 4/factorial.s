@@ -29,14 +29,12 @@ main:
 	subq $16, %rsp           # Reserve stack space for variable
         leaq -8(%rbp), %rsi     # Load address of stack var in rsi
         movq $formatstr, %rdi   # Load first argument of scanf
-        movq $0, %rax           # no vector registers for scanf
         call scanf              # Call scanf
 
 	call factorial
 
 	movq %rax, %rsi         # load stack variable as second argument
         movq $formatstr, %rdi   # load the formatstr as first argument
-        movq $0, %rax
 	call printf
 
 	movq $newline, %rdi
@@ -58,7 +56,7 @@ end:
 #************************************************************
 
 factorial:
-	movq $1, %rax	# move stack value into RAX
+	movq $1, %rax		# move 1 into RAX
 if:
 	cmpq $1, -8(%rbp)	# compare stack value: -8(%rbp) <= 1
 	jle base_case		# if -8(%rbp)<=1 jump to base_case
