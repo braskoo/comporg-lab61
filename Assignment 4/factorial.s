@@ -26,7 +26,7 @@ main:
         movq $0, %rax
 	call printf
 
-	subq $16, %rsp           # Reserve stack space for variable
+	subq $16, %rsp          # Reserve stack space for variable
         leaq -8(%rbp), %rsi     # Load address of stack var in rsi
         movq $formatstr, %rdi   # Load first argument of scanf
         call scanf              # Call scanf
@@ -50,7 +50,7 @@ end:
 
 #************************************************************
 #*Subroutine: factorial                                     *
-#*Arguments:                                                *
+#*Arguments: int n                                          *
 #*Return value: int                                         *
 #*Description: Takes input n from user and calculates n!    *
 #************************************************************
